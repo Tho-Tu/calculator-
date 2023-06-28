@@ -136,11 +136,12 @@ zeroButton.addEventListener('click', () => {
 
 const equalsButton = document.querySelector('#equals');
 equalsButton.addEventListener('click', () => {
-    displayScreen.textContent = display(operate(operator, 
-        firstNumber, secondNumber));
+    answerNumber = operate(operator, 
+        firstNumber, secondNumber)
+    displayScreen.textContent = answerNumber;
     isFirstNumber = false;
     isDecimal = false;
-    firstNumber = operate(operator, firstNumber, secondNumber);
+    firstNumber = answerNumber;
 });
 
 const addButton = document.querySelector('#add');
