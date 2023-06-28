@@ -136,12 +136,15 @@ zeroButton.addEventListener('click', () => {
 
 const equalsButton = document.querySelector('#equals');
 equalsButton.addEventListener('click', () => {
-    answerNumber = operate(operator, 
-        firstNumber, secondNumber)
-    displayScreen.textContent = answerNumber;
-    isFirstNumber = false;
-    isDecimal = false;
-    firstNumber = answerNumber;
+    if (isFirstNumber === false) {
+        answerNumber = operate(operator, 
+            firstNumber, secondNumber)
+        globalNumber = `${answerNumber}`;
+        displayScreen.textContent = answerNumber;
+        isFirstNumber = true;
+        isDecimal = false;
+        firstNumber = globalNumber;
+    }
 });
 
 const addButton = document.querySelector('#add');
@@ -173,7 +176,7 @@ function divide(a, b){
 
 function operate(operator, firstNumber, secondNumber){
     if (operator === null){
-        return;
+        return firstNumber;
     }
     firstNumber = Number(firstNumber);
     secondNumber = Number(secondNumber);
