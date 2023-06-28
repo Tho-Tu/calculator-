@@ -20,7 +20,19 @@ button {
     flex: 1;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.25rem;
+    transition-duration: 0.4s;
 }
+
+button:hover {
+    background-color:coral;
+    color: white;
+  }
+
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+    transition-duration: 0.1s;
+  }
 
 .calculator {
     display: flex;
@@ -37,6 +49,12 @@ button {
     border-radius: 0.5rem;
     background-color: antiquewhite;
     border: 1px solid;
+    padding: 0.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .buttons {
@@ -53,4 +71,9 @@ button {
     background-color:antiquewhite;
 }
 
+#clear:hover, #delete:hover, #divide:hover, #multiply:hover, 
+#minus:hover, #add:hover, #equals:hover, #decimal:hover {
+    background-color:coral;
+    color: white;
+  }
 
